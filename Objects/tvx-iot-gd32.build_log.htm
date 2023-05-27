@@ -1,0 +1,1574 @@
+<html>
+<body>
+<pre>
+<h1>�Vision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ��Vision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Wang Su, Personal, LIC=MPPLD-84LDX-VE7HA-1R86N-CCLLP-09JZI
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.36.0.0
+Toolchain Path:  D:\program\dev\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.16
+Assembler:       Armasm.exe V6.16
+Linker/Locator:  ArmLink.exe V6.16
+Library Manager: ArmAr.exe V6.16
+Hex Converter:   FromElf.exe V6.16
+CPU DLL:         SARMCM3.DLL V5.36.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      CMSIS_AGDI.dll V1.33.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+D:\work\njbdbd\iot\tvs\hard\tvx-gd32keil5\tvx-iot-gd32.uvprojx
+Project File Date:  02/22/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.16', folder: 'D:\program\dev\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'tvx-iot-gd32f405rgt6'
+Note: source file 'RTE\Device\GD32F405RG\startup_gd32f405_425.s' - object file renamed from '.\Objects\startup_gd32f405_425.o' to '.\Objects\startup_gd32f405_425_1.o'.
+Note: source file 'RTE\Device\GD32F405RG\startup_gd32f405_425.s' - object file renamed from '.\Objects\startup_gd32f405_425.o' to '.\Objects\startup_gd32f405_425_1.o'.
+Note: source file 'RTE\Device\GD32F405RG\system_gd32f4xx.c' - object file renamed from '.\Objects\system_gd32f4xx.o' to '.\Objects\system_gd32f4xx_1.o'.
+compiling clib_arm.c...
+compiling os_systick.c...
+Application/gd32f4xx_it.c(89): warning: function 'MemManage_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/gd32f4xx_it.c(103): warning: function 'BusFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/gd32f4xx_it.c(117): warning: function 'UsageFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/gd32f4xx_it.c(205): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+4 warnings generated.
+compiling gd32f4xx_it.c...
+compiling gd32f4xx_adc.c...
+RTE/Device/GD32F405RG/gd32f4xx_can.c(41): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_can.h(437): warning: padding size of 'can_filter_parameter_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_can.h(416): warning: padding size of 'can_trasnmit_message_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+RTE/Device/GD32F405RG/gd32f4xx_can.c(136): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+3 warnings generated.
+compiling gd32f4xx_can.c...
+Application/main.c(1): warning: In file included from...
+Application/main.h(4): warning: 'HXTAL_VALUE' macro redefined [-Wmacro-redefined]
+#define HXTAL_VALUE    ((uint32_t)8000000)
+        ^
+<command line>(6): note: previous definition is here
+#define HXTAL_VALUE 8000000
+        ^
+Application/main.c(1): warning: In file included from...
+Application/main.h(5): warning: 'GD32F405' macro redefined [-Wmacro-redefined]
+#define GD32F405 
+        ^
+<command line>(4): note: previous definition is here
+#define GD32F405 1
+        ^
+Application/main.c(34): warning: no previous extern declaration for non-static variable 'sim_card_number' [-Wmissing-variable-declarations]
+char sim_card_number[22] = {0};
+     ^
+Application/main.c(34): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+char sim_card_number[22] = {0};
+^
+Application/main.c(38): warning: implicit conversion from 'int' to 'uint8_t' (aka 'unsigned char') changes value from 1024 to 0 [-Wconstant-conversion]
+uint8_t tx_size = UART0_BUFFER_SIZE;
+        ~~~~~~~   ^~~~~~~~~~~~~~~~~
+Application/main.c(25): note: expanded from macro 'UART0_BUFFER_SIZE'
+#define UART0_BUFFER_SIZE 1024
+                          ^~~~
+Application/main.c(38): warning: no previous extern declaration for non-static variable 'tx_size' [-Wmissing-variable-declarations]
+uint8_t tx_size = UART0_BUFFER_SIZE;
+        ^
+Application/main.c(38): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t tx_size = UART0_BUFFER_SIZE;
+^
+Application/main.c(39): warning: implicit conversion from 'int' to 'uint8_t' (aka 'unsigned char') changes value from 1024 to 0 [-Wconstant-conversion]
+uint8_t rx_size = UART0_BUFFER_SIZE;
+        ~~~~~~~   ^~~~~~~~~~~~~~~~~
+Application/main.c(25): note: expanded from macro 'UART0_BUFFER_SIZE'
+#define UART0_BUFFER_SIZE 1024
+                          ^~~~
+Application/main.c(39): warning: no previous extern declaration for non-static variable 'rx_size' [-Wmissing-variable-declarations]
+uint8_t rx_size = UART0_BUFFER_SIZE;
+        ^
+Application/main.c(39): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t rx_size = UART0_BUFFER_SIZE;
+^
+Application/main.c(40): warning: no previous extern declaration for non-static variable 'txcount' [-Wmissing-variable-declarations]
+__IO uint8_t txcount = 0;
+             ^
+Application/main.c(40): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__IO uint8_t txcount = 0;
+     ^
+Application/main.c(41): warning: no previous extern declaration for non-static variable 'rxcount' [-Wmissing-variable-declarations]
+__IO uint16_t rxcount = 0;
+              ^
+Application/main.c(41): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__IO uint16_t rxcount = 0;
+     ^
+Application/main.c(51): warning: no previous extern declaration for non-static variable 'USART0_RX_STA' [-Wmissing-variable-declarations]
+uint16_t USART0_RX_STA = 0;
+         ^
+Application/main.c(51): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint16_t USART0_RX_STA = 0;
+^
+Application/main.c(58): warning: no previous extern declaration for non-static variable 'tx5count' [-Wmissing-variable-declarations]
+__IO uint8_t tx5count = 0;
+             ^
+Application/main.c(58): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__IO uint8_t tx5count = 0;
+     ^
+Application/main.c(59): warning: no previous extern declaration for non-static variable 'rx5count' [-Wmissing-variable-declarations]
+__IO uint16_t rx5count = 0;
+              ^
+Application/main.c(59): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+__IO uint16_t rx5count = 0;
+     ^
+Application/main.c(64): warning: no previous extern declaration for non-static variable 'canDataBuffer' [-Wmissing-variable-declarations]
+uint8_t canDataBuffer[54] = {0};
+        ^
+Application/main.c(64): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t canDataBuffer[54] = {0};
+^
+Application/main.c(3): warning: In file included from...
+Application/gd32f4xx.h(362): warning: In file included from...
+Application/gd32f4xx_libopt.h(44): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_can.h(437): warning: padding size of 'can_filter_parameter_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_can.h(416): warning: padding size of 'can_trasnmit_message_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+Application/main.c(420): warning: format string is not a string literal [-Wformat-nonliteral]
+  vsprintf((char *)tmpBuffer, fmt, ap);
+                              ^~~
+Application/main.c(422): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  len = strlen((const char *)tmpBuffer); // 此次发送数据的长度
+      ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Application/main.c(447): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    lte_send_cmd("AT+CSQ", NULL, 100);
+                 ^~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(453): warning: passing 'char [6]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    p = lte_check_cmd("+CSQ:");
+                      ^~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(460): warning: implicit declaration of function 'atoi' is invalid in C99 [-Wimplicit-function-declaration]
+    uint8_t csq = atoi((const char *)p);
+                  ^
+Application/main.c(460): warning: implicit conversion loses integer precision: 'int' to 'uint8_t' (aka 'unsigned char') [-Wimplicit-int-conversion]
+    uint8_t csq = atoi((const char *)p);
+            ~~~   ^~~~~~~~~~~~~~~~~~~~~
+Application/main.c(465): warning: passing 'char [12]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    lte_send_cmd("AT+CGPSINFO", NULL, 100);
+                 ^~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(470): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    p = lte_check_cmd("+CGPSINFO:");
+                      ^~~~~~~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(481): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    memcpy(gps, p, strlen(p));
+                          ^
+D:\program\dev\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+Application/main.c(510): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(lat, gps, p3 - gps);
+      ~~~~~~           ~~~^~~~~
+Application/main.c(515): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(lon, p3, p4 - p3);
+      ~~~~~~          ~~~^~~~
+Application/main.c(520): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(gps_date, p4, p5 - p4);
+      ~~~~~~               ~~~^~~~
+Application/main.c(523): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(gps_time, p5, p6 - p5);
+      ~~~~~~               ~~~^~~~
+Application/main.c(526): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(alt, p6, p7 - p6);
+      ~~~~~~          ~~~^~~~
+Application/main.c(529): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(speed, p7, p8 - p7);
+      ~~~~~~            ~~~^~~~
+Application/main.c(533): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+      memcpy(course, p8, p9 - p8);
+      ~~~~~~             ~~~^~~~
+Application/main.c(542): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    uint8_t time_cmd_r = lte_send_cmd("AT+CCLK?", NULL, 100);
+                                      ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(545): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    p = lte_check_cmd("+CCLK:");
+                      ^~~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(552): warning: passing 'uint8_t *' (aka 'unsigned char *') to parameter of type 'const char *' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    memcpy(timestr, p, strlen(p));
+                              ^
+D:\program\dev\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h(335): note: passing argument to parameter here
+extern _ARMABI size_t strlen(const char * /*s*/) __attribute__((__nonnull__(1)));
+                                               ^
+Application/main.c(581): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,31", ">", 100);
+                               ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(581): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,31", ">", 100);
+                                                     ^~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(586): warning: passing 'char [50]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      lte_send_cmd(iot_cmd, "", 100);
+                   ^~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(586): warning: passing 'char [1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      lte_send_cmd(iot_cmd, "", 100);
+                            ^~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(589): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                       ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(589): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                                             ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(600): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                               ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(600): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                                                     ^~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(605): warning: passing 'char [50]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      lte_send_cmd(iot_cmd, "", 100);
+                   ^~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(605): warning: passing 'char [1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      lte_send_cmd(iot_cmd, "", 100);
+                            ^~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(621): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                       ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(621): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                                             ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(634): warning: declaration shadows a local variable [-Wshadow]
+        uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                ^
+Application/main.c(600): note: previous declaration is here
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+              ^
+Application/main.c(634): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                                 ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(634): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                                                       ^~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(639): warning: passing 'char [50]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        lte_send_cmd(iot_cmd, "", 100);
+                     ^~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(639): warning: passing 'char [1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        lte_send_cmd(iot_cmd, "", 100);
+                              ^~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(640): warning: unknown escape sequence '\,' [-Wunknown-escape-sequence]
+        push_mqtt_message(WorkInfoTemplate,
+                          ^~~~~~~~~~~~~~~~
+Application/main.c(399): note: expanded from macro 'WorkInfoTemplate'
+\"lat\":%s\,\
+          ^~~
+Application/main.c(640): warning: unknown escape sequence '\,' [-Wunknown-escape-sequence]
+        push_mqtt_message(WorkInfoTemplate,
+                          ^~~~~~~~~~~~~~~~
+Application/main.c(401): note: expanded from macro 'WorkInfoTemplate'
+\"lon\":%s\,\
+          ^~~
+Application/main.c(640): warning: unknown escape sequence '\,' [-Wunknown-escape-sequence]
+        push_mqtt_message(WorkInfoTemplate,
+                          ^~~~~~~~~~~~~~~~
+Application/main.c(403): note: expanded from macro 'WorkInfoTemplate'
+\"alt\":%s\,\
+          ^~~
+Application/main.c(640): warning: unknown escape sequence '\,' [-Wunknown-escape-sequence]
+        push_mqtt_message(WorkInfoTemplate,
+                          ^~~~~~~~~~~~~~~~
+Application/main.c(404): note: expanded from macro 'WorkInfoTemplate'
+\"speed\":%s\,\
+            ^~~
+Application/main.c(640): warning: unknown escape sequence '\,' [-Wunknown-escape-sequence]
+        push_mqtt_message(WorkInfoTemplate,
+                          ^~~~~~~~~~~~~~~~
+Application/main.c(405): note: expanded from macro 'WorkInfoTemplate'
+\"course\":%s\,\
+             ^~~
+Application/main.c(677): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                         ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(677): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+        r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                                               ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(708): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                               ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(708): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      uint8_t r = lte_send_cmd("AT+CMQTTTOPIC=0,32", ">", 100);
+                                                     ^~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(713): warning: passing 'char [50]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      lte_send_cmd(iot_cmd, "", 100);
+                   ^~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(713): warning: passing 'char [1]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      lte_send_cmd(iot_cmd, "", 100);
+                            ^~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(734): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                       ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(734): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CMQTTPUB=0,1,60", "OK", 100);
+                                             ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(542): warning: unused variable 'time_cmd_r' [-Wunused-variable]
+    uint8_t time_cmd_r = lte_send_cmd("AT+CCLK?", NULL, 100);
+            ^
+Application/main.c(434): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void push_mqtt_message_task(void *pvParameters)
+                                  ^
+Application/main.c(434): warning: no previous prototype for function 'push_mqtt_message_task' [-Wmissing-prototypes]
+void push_mqtt_message_task(void *pvParameters)
+     ^
+Application/main.c(434): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void push_mqtt_message_task(void *pvParameters)
+^
+static 
+Application/main.c(435): warning: function 'push_mqtt_message_task' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/main.c(748): warning: no previous prototype for function 'a7600_4g_let_init' [-Wmissing-prototypes]
+void a7600_4g_let_init(void)
+     ^
+Application/main.c(748): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void a7600_4g_let_init(void)
+^
+static 
+Application/main.c(775): warning: initializing 'uint8_t *' (aka 'unsigned char *') with an expression of type 'char [8]' converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  uint8_t *str = "PB DONE";
+           ^     ~~~~~~~~~
+Application/main.c(814): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  uint8_t r = lte_send_cmd("AT", "OK", 100);
+                           ^~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(814): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  uint8_t r = lte_send_cmd("AT", "OK", 100);
+                                 ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(825): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CPIN?", "+CPIN: READY", 100);
+                   ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(825): warning: passing 'char [13]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CPIN?", "+CPIN: READY", 100);
+                               ^~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(835): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CICCID", NULL, 100);
+                   ^~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(839): warning: passing 'char [8]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  p = lte_check_cmd("+ICCID:");
+                    ^~~~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(852): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CCLK?", NULL, 100);
+                   ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(855): warning: passing 'char [7]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  p = lte_check_cmd("+CCLK:");
+                    ^~~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(864): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CTZU?", "CTZU: 1", 100);
+                     ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(864): warning: passing 'char [8]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CTZU?", "CTZU: 1", 100);
+                                 ^~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(868): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CTZU=1", "OK", 100);
+                       ^~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(868): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT+CTZU=1", "OK", 100);
+                                    ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(874): warning: passing 'char [5]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT&W", "OK", 100);
+                       ^~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(874): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+      r = lte_send_cmd("AT&W", "OK", 100);
+                               ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(884): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CGATT?", "CGATT: 1", 100);
+                   ^~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(884): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CGATT?", "CGATT: 1", 100);
+                                ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(887): warning: passing 'char [11]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CGATT=1", "OK", 100);
+                     ^~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(887): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CGATT=1", "OK", 100);
+                                   ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(891): warning: passing 'char [10]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CGATT?", "CGATT: 1", 100);
+                     ^~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(891): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CGATT?", "CGATT: 1", 100);
+                                  ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(895): warning: passing 'char [14]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CGNSSPWR=1", "OK", 100);
+                   ^~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(895): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CGNSSPWR=1", "OK", 100);
+                                    ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(907): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CAGPS", "OK", 1000);
+                   ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(907): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CAGPS", "OK", 1000);
+                               ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(913): warning: passing 'char [9]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CAGPS", "OK", 1000);
+                     ^~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(913): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CAGPS", "OK", 1000);
+                                 ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(838): warning: unused variable 'p2' [-Wunused-variable]
+  uint8_t *p, *p2;
+               ^
+Application/main.c(765): warning: no previous prototype for function 'a7600_4g_let_connect' [-Wmissing-prototypes]
+uint8_t a7600_4g_let_connect(void)
+        ^
+Application/main.c(765): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t a7600_4g_let_connect(void)
+^
+static 
+Application/main.c(929): warning: passing 'char [14]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  uint8_t r = lte_send_cmd("AT+CMQTTSTART", "+CMQTTSTART: 0", 2000);
+                           ^~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(929): warning: passing 'char [15]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  uint8_t r = lte_send_cmd("AT+CMQTTSTART", "+CMQTTSTART: 0", 2000);
+                                            ^~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(933): warning: passing 'char [14]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CMQTTSTART", "+CMQTTSTART: 0", 2000);
+                     ^~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(933): warning: passing 'char [15]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+    r = lte_send_cmd("AT+CMQTTSTART", "+CMQTTSTART: 0", 2000);
+                                      ^~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(945): warning: passing 'char [50]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd(iot_cmd, "OK", 100);
+                   ^~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(945): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd(iot_cmd, "OK", 100);
+                            ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(952): warning: passing 'char [60]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CMQTTCONNECT=0,\"tcp://node1.tvxiot.njbdbd.net:1883\",60,1", "OK", 100);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(952): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CMQTTCONNECT=0,\"tcp://node1.tvxiot.njbdbd.net:1883\",60,1", "OK", 100);
+                                                                                    ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(961): warning: passing 'char [19]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  lte_check_cmd("+CMQTTCONNECT: 0,0");
+                ^~~~~~~~~~~~~~~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(964): warning: passing 'char [23]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CMQTTSUBTOPIC=0,3,1", ">", 100);
+                   ^~~~~~~~~~~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(964): warning: passing 'char [2]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CMQTTSUBTOPIC=0,3,1", ">", 100);
+                                             ^~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(965): warning: passing 'char [4]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("tvx", "OK", 100);
+                   ^~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(965): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("tvx", "OK", 100);
+                          ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(966): warning: passing 'char [14]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CMQTTSUB=0", "OK", 100);
+                   ^~~~~~~~~~~~~~~
+Application/main.c(96): note: passing argument to parameter 'cmd' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                              ^
+Application/main.c(966): warning: passing 'char [3]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  r = lte_send_cmd("AT+CMQTTSUB=0", "OK", 100);
+                                    ^~~~
+Application/main.c(96): note: passing argument to parameter 'ack' here
+uint8_t lte_send_cmd(uint8_t *cmd, uint8_t *ack, uint16_t waittime);
+                                            ^
+Application/main.c(968): warning: passing 'char [15]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types where one is of the unique plain 'char' type and the other is not [-Wpointer-sign]
+  lte_check_cmd("+CMQTTSUB: 0,0");
+                ^~~~~~~~~~~~~~~~
+Application/main.c(95): note: passing argument to parameter 'str' here
+uint8_t *lte_check_cmd(uint8_t *str);
+                                ^
+Application/main.c(926): warning: no previous prototype for function 'a7600_4g_let_mqtt_connect' [-Wmissing-prototypes]
+uint8_t a7600_4g_let_mqtt_connect(void)
+        ^
+Application/main.c(926): note: declare 'static' if the function is not intended to be used outside of this translation unit
+uint8_t a7600_4g_let_mqtt_connect(void)
+^
+static 
+Application/main.c(975): warning: unused parameter 'f' [-Wunused-parameter]
+int fputc(int ch, FILE *f)
+                        ^
+Application/main.c(983): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void TestLED(void *pvParameters)
+                   ^
+Application/main.c(984): warning: function 'TestLED' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/main.c(1008): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void TestDBG(void *pvParameters)
+                   ^
+Application/main.c(1009): warning: function 'TestDBG' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/main.c(1020): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void CanBusThread(void *pvParameters)
+                        ^
+Application/main.c(1020): warning: no previous prototype for function 'CanBusThread' [-Wmissing-prototypes]
+void CanBusThread(void *pvParameters)
+     ^
+Application/main.c(1020): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void CanBusThread(void *pvParameters)
+^
+static 
+Application/main.c(1021): warning: function 'CanBusThread' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/main.c(1042): warning: no previous prototype for function 'HardFault_Handler' [-Wmissing-prototypes]
+void HardFault_Handler(void)
+     ^
+Application/main.c(1042): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void HardFault_Handler(void)
+^
+static 
+Application/main.c(1043): warning: function 'HardFault_Handler' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/main.c(1054): warning: no previous prototype for function 'zdw_uart0_send_data_len' [-Wmissing-prototypes]
+void zdw_uart0_send_data_len(char *data, int len)
+     ^
+Application/main.c(1054): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void zdw_uart0_send_data_len(char *data, int len)
+^
+static 
+Application/main.c(1086): warning: format string is not a string literal [-Wformat-nonliteral]
+  vsprintf((char *)txbuffer, fmt, ap);
+                             ^~~
+Application/main.c(1088): warning: implicit conversion loses integer precision: 'unsigned int' to 'uint16_t' (aka 'unsigned short') [-Wimplicit-int-conversion]
+  len = strlen((const char *)txbuffer); // 此次发送数据的长度
+      ~ ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Application/main.c(1146): warning: unused variable 'ch' [-Wunused-variable]
+  uint8_t ch = 0;
+          ^
+Application/main.c(1147): warning: unused variable 'flag' [-Wunused-variable]
+  uint8_t flag = 1;
+          ^
+Application/main.c(1148): warning: unused variable 'timeout' [-Wunused-variable]
+  uint8_t timeout = 0xff;
+          ^
+Application/main.c(1322): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void a7600_4g_timer(void *pvParameters)
+                          ^
+Application/main.c(1322): warning: no previous prototype for function 'a7600_4g_timer' [-Wmissing-prototypes]
+void a7600_4g_timer(void *pvParameters)
+     ^
+Application/main.c(1322): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void a7600_4g_timer(void *pvParameters)
+^
+static 
+Application/main.c(1329): warning: unused parameter 'fmt' [-Wunused-parameter]
+void debuf_info(char *fmt, ...)
+                      ^
+Application/main.c(1329): warning: no previous prototype for function 'debuf_info' [-Wmissing-prototypes]
+void debuf_info(char *fmt, ...)
+     ^
+Application/main.c(1329): note: declare 'static' if the function is not intended to be used outside of this translation unit
+void debuf_info(char *fmt, ...)
+^
+static 
+Application/main.c(1334): warning: no previous extern declaration for non-static variable 'timer_rx_attr' [-Wmissing-variable-declarations]
+const osTimerAttr_t timer_rx_attr =
+                    ^
+Application/main.c(1334): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const osTimerAttr_t timer_rx_attr =
+      ^
+Application/main.c(1339): warning: unused parameter 'pvParameters' [-Wunused-parameter]
+void CanProjectMainAPP(void *pvParameters)
+                             ^
+Application/main.c(1340): warning: function 'CanProjectMainAPP' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+Application/main.c(18): warning: no previous extern declaration for non-static variable 'can0_receive_flag' [-Wmissing-variable-declarations]
+FlagStatus can0_receive_flag;
+           ^
+Application/main.c(18): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+FlagStatus can0_receive_flag;
+^
+Application/main.c(19): warning: no previous extern declaration for non-static variable 'can0_error_flag' [-Wmissing-variable-declarations]
+FlagStatus can0_error_flag;
+           ^
+Application/main.c(19): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+FlagStatus can0_error_flag;
+^
+Application/main.c(20): warning: no previous extern declaration for non-static variable 'can_init_parameter' [-Wmissing-variable-declarations]
+can_parameter_struct can_init_parameter;
+                     ^
+Application/main.c(20): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+can_parameter_struct can_init_parameter;
+^
+Application/main.c(21): warning: no previous extern declaration for non-static variable 'can_filter_parameter' [-Wmissing-variable-declarations]
+can_filter_parameter_struct can_filter_parameter;
+                            ^
+Application/main.c(21): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+can_filter_parameter_struct can_filter_parameter;
+^
+Application/main.c(22): warning: no previous extern declaration for non-static variable 'transmit_message' [-Wmissing-variable-declarations]
+can_trasnmit_message_struct transmit_message;
+                            ^
+Application/main.c(22): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+can_trasnmit_message_struct transmit_message;
+^
+Application/main.c(23): warning: no previous extern declaration for non-static variable 'receive_message' [-Wmissing-variable-declarations]
+can_receive_message_struct receive_message;
+                           ^
+Application/main.c(23): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+can_receive_message_struct receive_message;
+^
+Application/main.c(36): warning: no previous extern declaration for non-static variable 'txbuffer' [-Wmissing-variable-declarations]
+uint8_t txbuffer[UART0_BUFFER_SIZE];
+        ^
+Application/main.c(36): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t txbuffer[UART0_BUFFER_SIZE];
+^
+Application/main.c(37): warning: no previous extern declaration for non-static variable 'rxbuffer' [-Wmissing-variable-declarations]
+uint8_t rxbuffer[UART0_BUFFER_SIZE];
+        ^
+Application/main.c(37): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t rxbuffer[UART0_BUFFER_SIZE];
+^
+Application/main.c(52): warning: no previous extern declaration for non-static variable 'usart0_timer_id' [-Wmissing-variable-declarations]
+osTimerId_t usart0_timer_id;
+            ^
+Application/main.c(52): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+osTimerId_t usart0_timer_id;
+^
+Application/main.c(54): warning: no previous extern declaration for non-static variable 'tx5buffer' [-Wmissing-variable-declarations]
+uint8_t tx5buffer[UART0_BUFFER_SIZE];
+        ^
+Application/main.c(54): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t tx5buffer[UART0_BUFFER_SIZE];
+^
+Application/main.c(55): warning: no previous extern declaration for non-static variable 'rx5buffer' [-Wmissing-variable-declarations]
+uint8_t rx5buffer[UART0_BUFFER_SIZE];
+        ^
+Application/main.c(55): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t rx5buffer[UART0_BUFFER_SIZE];
+^
+149 warnings generated.
+compiling main.c...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(29): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1256): warning: padding size of 'struct xSTATIC_TCB' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TCB
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(656): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+      default:         state = osThreadError;      break;
+      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(730): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    taskYIELD();
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(30): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include/task.h(160): warning: padding struct 'struct xTASK_STATUS' with 3 bytes to align 'uxCurrentPriority' [-Wpadded]
+    UBaseType_t uxCurrentPriority;                /* The priority at which the task was running (may be inherited) when the structure was populated. */
+                ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include/task.h(154): warning: padding size of 'struct xTASK_STATUS' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xTASK_STATUS
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(29): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1391): warning: padding size of 'struct xSTATIC_TIMER' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TIMER
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1206): warning: implicit conversion changes signedness: 'UBaseType_t' (aka 'unsigned long') to 'BaseType_t' (aka 'long') [-Wsign-conversion]
+          hTimer = xTimerCreateStatic (name, 1, reload, callb, TimerCallback, (StaticTimer_t *)attr->cb_mem);
+                   ~~~~~~~~~~~~~~~~~~           ^~~~~~
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(1212): warning: implicit conversion changes signedness: 'UBaseType_t' (aka 'unsigned long') to 'BaseType_t' (aka 'long') [-Wsign-conversion]
+            hTimer = xTimerCreate (name, 1, reload, callb, TimerCallback);
+                     ~~~~~~~~~~~~           ^~~~~~
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/CMSIS/RTOS2/FreeRTOS/Source/cmsis_os2.c(29): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1363): warning: padding size of 'struct xSTATIC_EVENT_GROUP' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_EVENT_GROUP
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1343): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+        UBaseType_t uxDummy8;
+                    ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1320): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+11 warnings generated.
+compiling cmsis_os2.c...
+compiling gd32f4xx_crc.c...
+compiling gd32f4xx_ctc.c...
+compiling gd32f4xx_dbg.c...
+compiling gd32f4xx_dac.c...
+compiling gd32f4xx_dci.c...
+compiling gd32f4xx_dma.c...
+compiling gd32f4xx_fwdgt.c...
+RTE/Device/GD32F405RG/gd32f4xx_exti.c(91): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+RTE/Device/GD32F405RG/gd32f4xx_exti.c(110): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+2 warnings generated.
+compiling gd32f4xx_exti.c...
+compiling gd32f4xx_gpio.c...
+RTE/Device/GD32F405RG/gd32f4xx_fmc.c(601): warning: unused variable 'wp0_state' [-Wunused-variable]
+    uint32_t wp0_state = FMC_OBCTL0 & FMC_OBCTL0_WP0;
+             ^
+RTE/Device/GD32F405RG/gd32f4xx_fmc.c(602): warning: unused variable 'wp1_state' [-Wunused-variable]
+    uint32_t wp1_state = FMC_OBCTL1 & FMC_OBCTL1_WP1;
+             ^
+2 warnings generated.
+compiling gd32f4xx_fmc.c...
+compiling gd32f4xx_exmc.c...
+compiling gd32f4xx_i2c.c...
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(72): warning: no previous extern declaration for non-static variable 'dma_current_ptp_txdesc' [-Wmissing-variable-declarations]
+enet_descriptors_struct  *dma_current_ptp_txdesc = NULL;
+                          ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(72): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enet_descriptors_struct  *dma_current_ptp_txdesc = NULL;
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(73): warning: no previous extern declaration for non-static variable 'dma_current_ptp_rxdesc' [-Wmissing-variable-declarations]
+enet_descriptors_struct  *dma_current_ptp_rxdesc = NULL;
+                          ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(73): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enet_descriptors_struct  *dma_current_ptp_rxdesc = NULL;
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(306): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(2044): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(3239): warning: 10 enumeration values not explicitly handled in switch: 'ENET_PTP_FINEMODE', 'ENET_SUBSECOND_DIGITAL_ROLLOVER', 'ENET_SNOOPING_PTP_VERSION_2'... [-Wswitch-enum]
+    switch(func) {
+           ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(60): warning: no previous extern declaration for non-static variable 'rxdesc_tab' [-Wmissing-variable-declarations]
+enet_descriptors_struct  rxdesc_tab[ENET_RXBUF_NUM] __attribute__((aligned(4)));          /*!< ENET RxDMA descriptor */
+                         ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(60): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enet_descriptors_struct  rxdesc_tab[ENET_RXBUF_NUM] __attribute__((aligned(4)));          /*!< ENET RxDMA descriptor */
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(61): warning: no previous extern declaration for non-static variable 'txdesc_tab' [-Wmissing-variable-declarations]
+enet_descriptors_struct  txdesc_tab[ENET_TXBUF_NUM] __attribute__((aligned(4)));          /*!< ENET TxDMA descriptor */
+                         ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(61): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enet_descriptors_struct  txdesc_tab[ENET_TXBUF_NUM] __attribute__((aligned(4)));          /*!< ENET TxDMA descriptor */
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(62): warning: no previous extern declaration for non-static variable 'rx_buff' [-Wmissing-variable-declarations]
+uint8_t rx_buff[ENET_RXBUF_NUM][ENET_RXBUF_SIZE] __attribute__((aligned(4)));             /*!< ENET receive buffer */
+        ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(62): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t rx_buff[ENET_RXBUF_NUM][ENET_RXBUF_SIZE] __attribute__((aligned(4)));             /*!< ENET receive buffer */
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(63): warning: no previous extern declaration for non-static variable 'tx_buff' [-Wmissing-variable-declarations]
+uint8_t tx_buff[ENET_TXBUF_NUM][ENET_TXBUF_SIZE] __attribute__((aligned(4)));             /*!< ENET transmit buffer */
+        ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(63): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+uint8_t tx_buff[ENET_TXBUF_NUM][ENET_TXBUF_SIZE] __attribute__((aligned(4)));             /*!< ENET transmit buffer */
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(68): warning: no previous extern declaration for non-static variable 'dma_current_txdesc' [-Wmissing-variable-declarations]
+enet_descriptors_struct  *dma_current_txdesc;
+                          ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(68): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enet_descriptors_struct  *dma_current_txdesc;
+^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(69): warning: no previous extern declaration for non-static variable 'dma_current_rxdesc' [-Wmissing-variable-declarations]
+enet_descriptors_struct  *dma_current_rxdesc;
+                          ^
+RTE/Device/GD32F405RG/gd32f4xx_enet.c(69): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+enet_descriptors_struct  *dma_current_rxdesc;
+^
+11 warnings generated.
+compiling gd32f4xx_enet.c...
+compiling gd32f4xx_misc.c...
+compiling gd32f4xx_iref.c...
+compiling gd32f4xx_ipa.c...
+compiling gd32f4xx_pmu.c...
+RTE/Device/GD32F405RG/gd32f4xx_rcu.c(1011): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+RTE/Device/GD32F405RG/gd32f4xx_rcu.c(1092): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+RTE/Device/GD32F405RG/gd32f4xx_rcu.c(1130): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+RTE/Device/GD32F405RG/gd32f4xx_rcu.c(1328): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+4 warnings generated.
+compiling gd32f4xx_rcu.c...
+RTE/Device/GD32F405RG/gd32f4xx_rtc.c(39): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_rtc.h(244): warning: padding struct 'rtc_parameter_struct' with 1 byte to align 'factor_asyn' [-Wpadded]
+    uint16_t factor_asyn;                                                       /*!< RTC asynchronous prescaler value: 0x0 - 0x7F */
+             ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_rtc.h(271): warning: padding struct 'rtc_timestamp_struct' with 2 bytes to align 'am_pm' [-Wpadded]
+    uint32_t am_pm;                                                             /*!< RTC time-stamp AM/PM value */
+             ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_rtc.h(282): warning: padding struct 'rtc_tamper_struct' with 3 bytes to align 'tamper_precharge_time' [-Wpadded]
+    uint32_t tamper_precharge_time;                                             /*!< RTC tamper precharge duration if precharge feature is enabled */
+             ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_rtc.h(275): warning: padding size of 'rtc_tamper_struct' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+4 warnings generated.
+compiling gd32f4xx_rtc.c...
+compiling gd32f4xx_syscfg.c...
+compiling gd32f4xx_sdio.c...
+RTE/Device/GD32F405RG/gd32f4xx_tli.c(38): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_tli.h(226): warning: padding struct 'tli_layer_parameter_struct' with 3 bytes to align 'layer_acf1' [-Wpadded]
+    uint32_t layer_acf1;                      /*!< alpha calculation factor 1 of blending method */
+             ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_tli.h(215): warning: padding size of 'tli_layer_parameter_struct' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_tli.h(235): warning: padding size of 'tli_layer_lut_parameter_struct' with 1 byte to alignment boundary [-Wpadded]
+typedef struct {
+        ^
+3 warnings generated.
+compiling gd32f4xx_tli.c...
+compiling gd32f4xx_spi.c...
+compiling gd32f4xx_trng.c...
+RTE/Device/GD32F405RG/gd32f4xx_timer.c(39): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/GigaDevice/GD32F4xx_DFP/3.0.3/Device/F4XX/Firmware/Peripherals/inc\gd32f4xx_timer.h(268): warning: padding size of 'timer_parameter_struct' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct
+        ^
+1 warning generated.
+compiling gd32f4xx_timer.c...
+RTE/Device/GD32F405RG/gd32f4xx_usart.c(322): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+    default:
+    ^
+1 warning generated.
+compiling gd32f4xx_usart.c...
+assembling startup_gd32f405_425.s...
+compiling gd32f4xx_wwdgt.c...
+compiling freertos_evr.c...
+compiling list.c...
+compiling system_gd32f4xx.c...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/event_groups.c(64): warning: padding size of 'struct EventGroupDef_t' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct EventGroupDef_t
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/event_groups.c(38): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1363): warning: padding size of 'struct xSTATIC_EVENT_GROUP' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_EVENT_GROUP
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/event_groups.c(261): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            portYIELD_WITHIN_API();
+                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/event_groups.c(413): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            portYIELD_WITHIN_API();
+                                  ^
+4 warnings generated.
+compiling event_groups.c...
+compiling port.c...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c(37): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1256): warning: padding size of 'struct xSTATIC_TCB' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TCB
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c(75): warning: padding size of 'struct tmrTimerControl' with 3 bytes to alignment boundary [-Wpadded]
+    typedef struct tmrTimerControl                  /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+                   ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c(37): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1391): warning: padding size of 'struct xSTATIC_TIMER' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TIMER
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c(569): warning: function 'prvTimerTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+    {
+    ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c(650): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        portYIELD_WITHIN_API();
+                                              ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/timers.c(37): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1343): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+        UBaseType_t uxDummy8;
+                    ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1320): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+7 warnings generated.
+compiling timers.c...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/portable/MemMang/heap_4.c(414): warning: cast from 'uint8_t *' (aka 'unsigned char *') to 'BlockLink_t *' (aka 'struct A_BLOCK_LINK *') increases required alignment from 1 to 4 [-Wcast-align]
+    pxFirstFreeBlock = ( BlockLink_t * ) pucAlignedHeap;
+                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+compiling heap_4.c...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(329): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        queueYIELD_IF_USING_PREEMPTION();
+                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(130): warning: padding struct 'struct QueueDefinition' with 1 byte to align 'uxQueueNumber' [-Wpadded]
+        UBaseType_t uxQueueNumber;
+                    ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(100): warning: padding size of 'struct QueueDefinition' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct QueueDefinition /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(37): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1343): warning: padding struct 'struct xSTATIC_QUEUE' with 1 byte to align 'uxDummy8' [-Wpadded]
+        UBaseType_t uxDummy8;
+                    ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1320): warning: padding size of 'struct xSTATIC_QUEUE' with 3 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_QUEUE
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(942): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                            queueYIELD_IF_USING_PREEMPTION();
+                                                            ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(955): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        queueYIELD_IF_USING_PREEMPTION();
+                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1024): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    portYIELD_WITHIN_API();
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1195): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                prvIncrementQueueTxLock( pxQueue, cTxLock );
+                                                           ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1361): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                prvIncrementQueueTxLock( pxQueue, cTxLock );
+                                                           ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1425): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        queueYIELD_IF_USING_PREEMPTION();
+                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1485): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    portYIELD_WITHIN_API();
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1588): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        queueYIELD_IF_USING_PREEMPTION();
+                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1668): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    portYIELD_WITHIN_API();
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1785): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        queueYIELD_IF_USING_PREEMPTION();
+                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1846): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    portYIELD_WITHIN_API();
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/queue.c(1958): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                prvIncrementQueueRxLock( pxQueue, cRxLock );
+                                                           ^
+17 warnings generated.
+compiling queue.c...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(329): warning: no previous extern declaration for non-static variable 'pxCurrentTCB' [-Wmissing-variable-declarations]
+portDONT_DISCARD PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(329): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+portDONT_DISCARD PRIVILEGED_DATA TCB_t * volatile pxCurrentTCB = NULL;
+                                 ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(255): warning: padding size of 'struct tskTaskControlBlock' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct tskTaskControlBlock       /* The old naming convention is used to prevent breaking kernel aware debuggers. */
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(376): warning: no previous extern declaration for non-static variable 'uxTopUsedPriority' [-Wmissing-variable-declarations]
+const volatile UBaseType_t uxTopUsedPriority = configMAX_PRIORITIES - 1U;
+                           ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(376): note: declare 'static' if the variable is not intended to be used outside of this translation unit
+const volatile UBaseType_t uxTopUsedPriority = configMAX_PRIORITIES - 1U;
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(39): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include\FreeRTOS.h(1256): warning: padding size of 'struct xSTATIC_TCB' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xSTATIC_TCB
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1084): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        prvAddTaskToReadyList( pxNewTCB );
+                                         ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1096): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            taskYIELD_IF_USING_PREEMPTION();
+                                           ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1200): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                portYIELD_WITHIN_API();
+                                      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1286): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            portYIELD_WITHIN_API();
+                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1333): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            portYIELD_WITHIN_API();
+                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1644): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1653): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    taskYIELD_IF_USING_PREEMPTION();
+                                                   ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1747): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                portYIELD_WITHIN_API();
+                                      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1845): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1853): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        taskYIELD_IF_USING_PREEMPTION();
+                                                       ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(1931): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2201): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listREMOVE_ITEM( &( pxTCB->xEventListItem ) );
+                                                                 ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2203): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
+                                                                 ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2204): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2267): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    taskYIELD_IF_USING_PREEMPTION();
+                                                   ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(40): warning: In file included from...
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include/task.h(160): warning: padding struct 'struct xTASK_STATUS' with 3 bytes to align 'uxCurrentPriority' [-Wpadded]
+    UBaseType_t uxCurrentPriority;                /* The priority at which the task was running (may be inherited) when the structure was populated. */
+                ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/include/task.h(154): warning: padding size of 'struct xTASK_STATUS' with 2 bytes to alignment boundary [-Wpadded]
+typedef struct xTASK_STATUS
+               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2743): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            taskSWITCH_DELAYED_LISTS();
+                                      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2793): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
+                                                                 ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2799): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        listREMOVE_ITEM( &( pxTCB->xEventListItem ) );
+                                                                     ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(2808): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3051): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        taskCHECK_FOR_STACK_OVERFLOW();
+                                      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3062): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        taskSELECT_HIGHEST_PRIORITY_TASK(); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3128): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    listINSERT_END( pxEventList, &( pxCurrentTCB->xEventListItem ) );
+                                                                    ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3152): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        listINSERT_END( pxEventList, &( pxCurrentTCB->xEventListItem ) );
+                                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3189): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    listREMOVE_ITEM( &( pxUnblockedTCB->xEventListItem ) );
+                                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3193): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        listREMOVE_ITEM( &( pxUnblockedTCB->xStateListItem ) );
+                                                              ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3194): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        prvAddTaskToReadyList( pxUnblockedTCB );
+                                               ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3214): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+        listINSERT_END( &( xPendingReadyList ), &( pxUnblockedTCB->xEventListItem ) );
+                                                                                     ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3253): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    listREMOVE_ITEM( pxEventListItem );
+                                      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3272): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    listREMOVE_ITEM( &( pxUnblockedTCB->xStateListItem ) );
+                                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3273): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+    prvAddTaskToReadyList( pxUnblockedTCB );
+                                           ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3469): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                taskYIELD();
+                           ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3428): warning: function 'prvIdleTask' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+{
+^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3832): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            listGET_OWNER_OF_NEXT_ENTRY( pxFirstTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
+                                                             ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(3840): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                listGET_OWNER_OF_NEXT_ENTRY( pxNextTCB, pxList ); /*lint !e9079 void * is used as this macro is used with timers and co-routines too.  Alignment is known to be fine as the type of the pointer stored and retrieved is the same. */
+                                                                ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4112): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxMutexHolderTCB );
+                                                             ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4202): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4315): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                        prvAddTaskToReadyList( pxTCB );
+                                                      ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4716): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    portYIELD_WITHIN_API();
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4795): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    portYIELD_WITHIN_API();
+                                          ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4908): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default:
+                ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4924): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
+                                                             ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4925): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                prvAddTaskToReadyList( pxTCB );
+                                              ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(4950): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    taskYIELD_IF_USING_PREEMPTION();
+                                                   ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5051): warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+                default:
+                ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5071): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
+                                                                 ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5072): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5078): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
+                                                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5162): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listREMOVE_ITEM( &( pxTCB->xStateListItem ) );
+                                                                 ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5163): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    prvAddTaskToReadyList( pxTCB );
+                                                  ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5169): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+                    listINSERT_END( &( xPendingReadyList ), &( pxTCB->xEventListItem ) );
+                                                                                        ^
+D:/program/dev/Keil_v5_Packs/ARM/CMSIS-FreeRTOS/10.5.1/Source/tasks.c(5332): warning: empty expression statement has no effect; remove unnecessary ';' to silence this warning [-Wextra-semi-stmt]
+            listINSERT_END( &xSuspendedTaskList, &( pxCurrentTCB->xStateListItem ) );
+                                                                                    ^
+57 warnings generated.
+compiling tasks.c...
+linking...
+Program Size: Code=27700 RO-data=3068 RW-data=16 ZI-data=13968  
+FromELF: creating hex file...
+".\Objects\tvx-iot-gd32.axf" - 0 Error(s), 281 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.9.0.pack
+                ARM.CMSIS.5.9.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: RTOS2 Version: 2.1.3
+   * Component: CORE Version: 5.6.0
+
+Package Vendor: ARM
+                https://www.keil.com/pack/ARM.CMSIS-FreeRTOS.10.5.1.pack
+                ARM.CMSIS-FreeRTOS.10.5.1
+                Bundle of FreeRTOS for Cortex-M and Cortex-A
+   * Component: Config Variant: CMSIS RTOS2 Version: 10.5.1
+   * Component: Core Variant: Cortex-M Version: 10.5.1
+   * Component: Event Groups Version: 10.5.1
+   * Component: Heap Variant: Heap_4 Version: 10.5.1
+   * Component: Timers Version: 10.5.1
+   * Component: FreeRTOS Variant: Cortex-M Version: 10.5.1
+
+Package Vendor: GigaDevice
+                https://gd32mcu.com/data/documents/pack/GigaDevice.GD32F4xx_DFP.3.0.3.pack
+                GigaDevice.GD32F4xx_DFP.3.0.3
+                GigaDevice GD32F4xx Series Device Support and Examples
+   * Component: Libopt Version: 3.0.2
+   * Component: Startup Version: 3.0.2
+   * Component: ADC Version: 3.0.2
+   * Component: CAN Version: 3.0.2
+   * Component: CRC Version: 3.0.2
+   * Component: CTC Version: 3.0.2
+   * Component: DAC Version: 3.0.2
+   * Component: DBG Version: 3.0.2
+   * Component: DCI Version: 3.0.2
+   * Component: DMA Version: 3.0.2
+   * Component: ENET Version: 3.0.2
+   * Component: EXMC Version: 3.0.2
+   * Component: EXTI Version: 3.0.2
+   * Component: FMC Version: 3.0.2
+   * Component: FWDGT Version: 3.0.2
+   * Component: GPIO Version: 3.0.2
+   * Component: I2C Version: 3.0.2
+   * Component: IPA Version: 3.0.2
+   * Component: IREF Version: 3.0.2
+   * Component: MISC Version: 3.0.2
+   * Component: PMU Version: 3.0.2
+   * Component: RCU Version: 3.0.2
+   * Component: RTC Version: 3.0.2
+   * Component: SDIO Version: 3.0.2
+   * Component: SPI_I2S Version: 3.0.2
+   * Component: SYSCFG Version: 3.0.2
+   * Component: TIMER Version: 3.0.2
+   * Component: TLI Version: 3.0.2
+   * Component: TRNG Version: 3.0.2
+   * Component: USART Version: 3.0.2
+   * Component: WWDGT Version: 3.0.2
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\RTOS
+  .\RTE\_tvx-iot-gd32f405rgt6
+  D:\program\dev\Keil_v5_Packs\ARM\CMSIS-FreeRTOS\10.5.1\CMSIS\RTOS2\FreeRTOS\Include
+  D:\program\dev\Keil_v5_Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\include
+  D:\program\dev\Keil_v5_Packs\ARM\CMSIS-FreeRTOS\10.5.1\Source\portable\GCC\ARM_CM4F
+  D:\program\dev\Keil_v5_Packs\ARM\CMSIS\5.9.0\CMSIS\Core\Include
+  D:\program\dev\Keil_v5_Packs\ARM\CMSIS\5.9.0\CMSIS\RTOS2\Include
+  D:\program\dev\Keil_v5_Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Firmware\Peripherals\inc
+  D:\program\dev\Keil_v5_Packs\GigaDevice\GD32F4xx_DFP\3.0.3\Device\F4XX\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ::CMSIS:RTOS2:2.1.3 (API)
+      Include file:  CMSIS\RTOS2\Include\cmsis_os2.h
+
+   * Component: ARM.FreeRTOS::RTOS:Config:CMSIS RTOS2:10.5.1
+      Include file:  CMSIS\RTOS2\FreeRTOS\Config\ARMCM\FreeRTOSConfig.h
+
+   * Component: ARM.FreeRTOS::RTOS:Core:Cortex-M:10.5.1
+      Include file:  Source\include\queue.h
+      Include file:  Source\include\task.h
+      Source file:   Source\list.c
+      Source file:   Source\queue.c
+      Include file:  Source\include\FreeRTOS.h
+      Source file:   Source\tasks.c
+      Include file:  Source\include\semphr.h
+      Source file:   Source\portable\GCC\ARM_CM4F\port.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\freertos_evr.c
+
+   * Component: ARM.FreeRTOS::RTOS:Event Groups:10.5.1
+      Include file:  Source\include\event_groups.h
+      Source file:   Source\event_groups.c
+
+   * Component: ARM.FreeRTOS::RTOS:Heap:Heap_4:10.5.1
+      Source file:   Source\portable\MemMang\heap_4.c
+
+   * Component: ARM.FreeRTOS::RTOS:Timers:10.5.1
+      Include file:  Source\include\timers.h
+      Source file:   Source\timers.c
+
+   * Component: ARM::CMSIS:CORE:5.6.0
+
+   * Component: ARM::CMSIS:RTOS2:FreeRTOS:Cortex-M:10.5.1
+      Include file:  CMSIS\RTOS2\FreeRTOS\Include\freertos_mpool.h
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\cmsis_os2.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\ARM\clib_arm.c
+      Source file:   CMSIS\RTOS2\FreeRTOS\Source\os_systick.c
+
+   * Component: GigaDevice::Device:Libopt:3.0.2
+      Include file:  Device\F4XX\Include\gd32f4xx_libopt.h
+
+   * Component: GigaDevice::Device:Startup:3.0.2
+      Include file:  Device\F4XX\Include\gd32f4xx.h
+      Source file:   Device\F4XX\Source\system_gd32f4xx.c
+      Source file:   Device\F4XX\Source\ARM\startup_gd32f405_425.s
+
+   * Component: GigaDevice::Device:StdPeripherals:ADC:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_adc.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_adc.c
+
+   * Component: GigaDevice::Device:StdPeripherals:CAN:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_can.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_can.c
+
+   * Component: GigaDevice::Device:StdPeripherals:CRC:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_crc.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_crc.h
+
+   * Component: GigaDevice::Device:StdPeripherals:CTC:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_ctc.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_ctc.c
+
+   * Component: GigaDevice::Device:StdPeripherals:DAC:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_dac.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_dac.h
+
+   * Component: GigaDevice::Device:StdPeripherals:DBG:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_dbg.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_dbg.h
+
+   * Component: GigaDevice::Device:StdPeripherals:DCI:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_dci.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_dci.h
+
+   * Component: GigaDevice::Device:StdPeripherals:DMA:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_dma.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_dma.c
+
+   * Component: GigaDevice::Device:StdPeripherals:ENET:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_enet.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_enet.h
+
+   * Component: GigaDevice::Device:StdPeripherals:EXMC:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_exmc.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_exmc.h
+
+   * Component: GigaDevice::Device:StdPeripherals:EXTI:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_exti.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_exti.h
+
+   * Component: GigaDevice::Device:StdPeripherals:FMC:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_fmc.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_fmc.c
+
+   * Component: GigaDevice::Device:StdPeripherals:FWDGT:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_fwdgt.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_fwdgt.c
+
+   * Component: GigaDevice::Device:StdPeripherals:GPIO:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_gpio.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_gpio.h
+
+   * Component: GigaDevice::Device:StdPeripherals:I2C:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_i2c.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_i2c.c
+
+   * Component: GigaDevice::Device:StdPeripherals:IPA:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_ipa.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_ipa.c
+
+   * Component: GigaDevice::Device:StdPeripherals:IREF:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_iref.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_iref.c
+
+   * Component: GigaDevice::Device:StdPeripherals:MISC:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_misc.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_misc.c
+
+   * Component: GigaDevice::Device:StdPeripherals:PMU:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_pmu.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_pmu.c
+
+   * Component: GigaDevice::Device:StdPeripherals:RCU:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_rcu.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_rcu.c
+
+   * Component: GigaDevice::Device:StdPeripherals:RTC:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_rtc.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_rtc.c
+
+   * Component: GigaDevice::Device:StdPeripherals:SDIO:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_sdio.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_sdio.h
+
+   * Component: GigaDevice::Device:StdPeripherals:SPI_I2S:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_spi.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_spi.h
+
+   * Component: GigaDevice::Device:StdPeripherals:SYSCFG:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_syscfg.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_syscfg.h
+
+   * Component: GigaDevice::Device:StdPeripherals:TIMER:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_timer.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_timer.c
+
+   * Component: GigaDevice::Device:StdPeripherals:TLI:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_tli.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_tli.c
+
+   * Component: GigaDevice::Device:StdPeripherals:TRNG:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_trng.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_trng.c
+
+   * Component: GigaDevice::Device:StdPeripherals:USART:3.0.2
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_usart.h
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_usart.c
+
+   * Component: GigaDevice::Device:StdPeripherals:WWDGT:3.0.2
+      Source file:   Device\F4XX\Firmware\Peripherals\src\gd32f4xx_wwdgt.c
+      Include file:  Device\F4XX\Firmware\Peripherals\inc\gd32f4xx_wwdgt.h
+Build Time Elapsed:  00:00:08
+</pre>
+</body>
+</html>

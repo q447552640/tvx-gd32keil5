@@ -1,0 +1,21 @@
+{
+    "files.associations": {
+        "*.html": "html",
+        "rte_components.h": "c",
+        "gd32f4xx.h": "c",
+        "string.h": "c",
+        "cmsis_os2.h": "c",
+        "physicallayer.h": "c",
+        "inttypes.h": "c",
+        "simcom7670.h": "c",
+        "debuglog.h": "c",
+        "main.h": "c",
+        "gd32f4xx_usart.h": "c",
+        "__config": "c",
+        "cstddef": "c",
+        "limits": "c",
+        "type_traits": "c",
+        "stdarg.h": "c",
+        "time.h": "c"
+    }
+}
